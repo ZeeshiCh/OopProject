@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AddCarpetController">
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #810000;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Shahi Carpets">
+                    <font>
+                        <Font name="Bodoni MT" size="47.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox style="-fx-background-color: #810000;">
+            <children>
+                <Button fx:id="AddCarpetButton" defaultButton="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #960000;" text="Add Carpet" textFill="WHITE" />
+                <Button fx:id="UserDeleteButton" defaultButton="true" mnemonicParsing="false" onAction="#UserDeleteButtonOnAction" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #8c0a0a;" text="Delete Carpet" textFill="WHITE" />
+                <Button fx:id="UserShowDetails" defaultButton="true" mnemonicParsing="false" onAction="#UserShowDetailsOnAction" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #8c0a0a;" text="Show Details" textFill="WHITE">
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="ShowHistoryButton" defaultButton="true" mnemonicParsing="false" onAction="#UserShowHistory" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #8c0a0a;" text="Show History" textFill="WHITE" />
+            <Button fx:id="SignUp" defaultButton="true" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#CreateAdminOnAction" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #8c0a0a;" text="Create Admin" textFill="WHITE" />
+            <Button fx:id="UserLogOut" defaultButton="true" layoutX="10.0" layoutY="159.0" mnemonicParsing="false" onAction="#UserLogOutOnAction" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #8c0a0a;" text="LogOut" textFill="WHITE" />
+            </children>
+        </VBox>
+    </left>
+   <center>
+      <VBox prefHeight="343.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="353.0" prefWidth="444.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="AddCarpetName" text="Carpet Name" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="AddCarpetID" text="ID" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="AddCarpetColour" text="Colour" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="AddCarpetSize" text="Size" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="AddCarpetPrice" text="Price" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="AddCarpetNameTF" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <TextField fx:id="AddCarpetIDTF" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <TextField fx:id="AddCarpetColourTX" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <TextField fx:id="AddCarpetSizeTX" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="AddCarpetPriceTX" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Button fx:id="AddCarpetAddButton" mnemonicParsing="false" onAction="#AddCarpetData" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #810000;" text="Add" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Label fx:id="AddCarpetStock" text="Stock" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="AddCarpetStockTF" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.ShowHistoryController">
+    <top>
+        <HBox alignment="CENTER" style="-fx-background-color: #810000;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Shahi Carpets">
+                    <font>
+                        <Font name="Bodoni MT" size="47.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox style="-fx-background-color: #810000;">
+            <children>
+                <Button fx:id="UserAddButton" defaultButton="true" mnemonicParsing="false" onAction="#UserAddButtonOnAction" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #8c0a0a;" text="Add Carpet" textFill="WHITE">
+                    <font>
+                        <Font name="Constant" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="UserDeleteButton" defaultButton="true" mnemonicParsing="false" onAction="#UserDeleteButtonOnAction" prefHeight="37.0" prefWidth="155.0" style="-fx-background-color: #8c0a0a;" text="Delete Carpet" textFill="WHITE" />
+                <Button fx:id="UserShowDetails" defaultButton="true" mnemonicParsing="false" onAction="#UserShowDetailsOnAction" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #8c0a0a;" text="Show Details" textFill="WHITE">
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="ShowHistoryButton" defaultButton="true" mnemonicParsing="false" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #960000;" text="Show History" textFill="WHITE" />
+            <Button fx:id="SingUp" defaultButton="true" layoutX="10.0" layoutY="122.0" mnemonicParsing="false" onAction="#CreateAdminOnAction" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #8c0a0a;" text="Create Admin" textFill="WHITE" />
+            <Button fx:id="UserLogOut" defaultButton="true" layoutX="10.0" layoutY="159.0" mnemonicParsing="false" onAction="#UserLogOutOnAction" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: #8c0a0a;" text="LogOut" textFill="WHITE" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <TableView fx:id="tableShowDetails" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="IDColoumn" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="NameColoumn" prefWidth="96.0" text="Carpet Name" />
+                <TableColumn fx:id="ColorColumn" prefWidth="75.0" text="Colour" />
+                <TableColumn fx:id="SizeColoumn" prefWidth="75.0" text="Size" />
+                <TableColumn fx:id="PriceColoumn" prefWidth="75.0" text="Price" />
+                <TableColumn fx:id="StockColoumn" prefWidth="75.0" text="Stock" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
