@@ -35,13 +35,17 @@ public void loginBtnAction() throws IOException, ClassNotFoundException {
 //    FileInputStream fis = new FileInputStream("src/main/java/com/example/oopproject/UserData.txt");
 //    ObjectInputStream ois = new ObjectInputStream(fis);
     //    readDataFromFile.add((UserInfo) ois.readObject());
+    //
 
-    UserInfo user = new UserInfo(userName.getText(),password.getText());
+    //(user.compare(user,u)==0)||
+
+//    UserInfo user = new UserInfo(userName.getText(),password.getText());
     ArrayList<UserInfo> readDataFromFile = FileHandling.readFromFile("src/main/java/com/example/oopproject/UserData.txt");
 
     for (UserInfo u:readDataFromFile) {
 
-        if (userName.getText().equals(u.getUsername())&& password.getText().equals(u.getPassword())||(userName.getText().equals("Admin") && password.getText().equals("oopProject"))){
+       if (userName.getText().equals(u.getUsername())&& password.getText().equals(u.getPassword())||(userName.getText().equals("Admin") && password.getText().equals("oopProject")))
+        {
             try{
                 FXMLLoader fxmlLoader1 = new FXMLLoader(LoginController.class.getResource("User.fxml"));
                 Scene scene1 = new Scene(fxmlLoader1.load(),600,400);

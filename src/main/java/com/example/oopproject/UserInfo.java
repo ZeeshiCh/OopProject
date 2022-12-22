@@ -1,9 +1,12 @@
 package com.example.oopproject;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Comparator;
 
-public class UserInfo implements Serializable, Comparator<UserInfo> {
+public class UserInfo implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 8461071075695544337L;
     private String firstName;
     private String lastName;
     private String username;
@@ -63,12 +66,5 @@ public class UserInfo implements Serializable, Comparator<UserInfo> {
         this.confirmPassword = confirmPassword;
     }
 
-    @Override
-    public int compare(UserInfo o1, UserInfo o2) {
-        int flag = 1;
-        if(o1.username.equals(o2.username) && o1.password.equals(o2.password))
-            flag=0;
 
-        return flag;
-    }
 }
