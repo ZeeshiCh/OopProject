@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class HelloApplication extends Application {
@@ -17,7 +18,9 @@ public class HelloApplication extends Application {
         stage1=stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        Image image = new Image("D:\\OOP code\\oopProject\\src\\main\\resources\\com\\example\\oopproject\\Picture\\Butt.jpg");
+        URL url = HelloApplication.class.getResource("/com/example/oopproject/Picture/Butt.jpg");
+        assert url != null;
+        Image image = new Image(url.openStream());
         stage1.getIcons().add(image);
         stage1.setTitle("Shahi Carpets");
 
